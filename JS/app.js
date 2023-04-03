@@ -1,0 +1,35 @@
+
+
+
+
+let name1 = prompt("Please enter your name:");
+while (name1 == "") {
+  name1 = prompt("Please enter your name to continue:");
+}
+
+
+let gender = prompt("Please enter your gender (male/female):");
+while (gender ==="") {
+  gender = prompt("Please enter your gender (male/female) to continue:");
+}
+
+
+let age = prompt("Please enter your age:");
+while (age <= 0) {
+  age = prompt("the age is less than or equal to zero!,Please enter your age again to continue:");
+}
+
+
+if (confirm("Do you want skip the welcoming message?")) {
+  
+} else {
+  
+  if (gender == "male") {
+    alert("Welcom Mr " + name1);
+  } else if (gender == "female") {
+    alert("Welcom Ms " + name1);
+  } else {
+    alert("Welcom " + name1);
+  }
+} 
+
