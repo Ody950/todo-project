@@ -25,9 +25,9 @@ if (confirm("Do you want skip the welcoming message?")) {
   
 } else {
   
-  if (gender == "male" || gender == "Male" || gender == "MALE") {
+  if (gender.toLowerCase() === "male") {
     alert("Welcom Mr " + name1);
-  } else if (gender == "female" || gender == "Female" || gender == "FEMALE") {
+  } else if (gender.toLowerCase() === "female") {
     alert("Welcom Ms " + name1);
   } else {
     alert("Welcom " + name1);
