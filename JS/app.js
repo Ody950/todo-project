@@ -16,9 +16,11 @@ while (gender ==="") {
 
 let age = prompt("Please enter your age:");
 while (age <= 0) {
-  age = prompt("the age is less than or equal to zero!,Please enter your age again to continue:");
+  age = prompt("The age is less than or equal to zero!,Please enter your age again to continue:");
 }
-
+while (age <= 0 || isNaN(age)) {
+  age = prompt("The age is less than or equal to zero or not a number!,Please enter your age again to continue:");
+}
 
 if (confirm("Do you want skip the welcoming message?")) {
   
