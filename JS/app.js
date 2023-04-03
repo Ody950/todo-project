@@ -1,6 +1,5 @@
 
-
-
+"use strict";
 
 let name1 = prompt("Please enter your name:");
 while (name1 == "") {
@@ -26,9 +25,9 @@ if (confirm("Do you want skip the welcoming message?")) {
   
 } else {
   
-  if (gender == "male") {
+  if (gender == "male" || gender == "Male" || gender == "MALE") {
     alert("Welcom Mr " + name1);
-  } else if (gender == "female") {
+  } else if (gender == "female" || gender == "Female" || gender == "FEMALE") {
     alert("Welcom Ms " + name1);
   } else {
     alert("Welcom " + name1);
