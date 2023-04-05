@@ -37,14 +37,11 @@ if (confirm("Do you want skip the welcoming message?")) {
 
 //Lap_06:
 
-
 const answerArray = [];
 let answer1 = prompt("Does the time matter to you?(yes/no)") ;
 let answer2 = prompt("Are you confident that this website will allow you to organize your tasks in order to make the best use of your time (yes/no)");
 let answer3 = prompt("Are you of the opinion that the only time to rest should be when you sleep(yes/no)" );
   
-
-
 function QuestionsAndArray(answer) {
 
   if (answer === undefined) {
@@ -65,8 +62,6 @@ function QuestionsAndArray(answer) {
   QuestionsAndArray(answer3);
   
   
-
-
   function arrayAnswers (array) {
     
     for (let i = 0; i < array.length; i++) {
