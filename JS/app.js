@@ -38,48 +38,43 @@ if (confirm("Do you want skip the welcoming message?")) {
 //Lap_06:
 
 
+const answerArray = [];
+let answer1 = prompt("Does the time matter to you?(yes/no)") ;
+let answer2 = prompt("Are you confident that this website will allow you to organize your tasks in order to make the best use of your time (yes/no)");
+let answer3 = prompt("Are you of the opinion that the only time to rest should be when you sleep(yes/no)" );
+  
 
-  function QuestionsAndArray(question1, question2, question3) {
-    const answers = [];
-  
-    
-    let answer1 = prompt("Does the time matter to you?(yes/no)" + question1);
-    while (answer1.toLowerCase() !== "yes" && answer1.toLowerCase() !== "no") {
-      if (answer1 === "" || answer1 === null) {
-        answer1 = "invalid";
-        break;
-      } else {
-        answer1 = prompt("Does the time matter to you?(yes/no)" + question1);
-      }
-    }
-    answers.push(answer1);
-  
-    
-    let answer2 = prompt("Are you confident that this website will allow you to organize your tasks in order to make the best use of your time (yes/no)" + question2);
-    while (answer2.toLowerCase() !== "yes" && answer2.toLowerCase() !== "no") {
-      if (answer2 === "" || answer2 === null) {
-        answer2 = "invalid";
-        break;
-      } else {
-        answer2 = prompt("Are you confident that this website will allow you to organize your tasks in order to make the best use of your time (yes/no)" + question2);
-      }
-    }
-    answers.push(answer2);
-  
-    
-    let answer3 = prompt("Are you of the opinion that the only time to rest should be when you sleep(yes/no)" + question3);
-    while (answer3.toLowerCase() !== "yes" && answer3.toLowerCase() !== "no") {
-      if (answer3 === "" || answer3 === null) {
-        answer3 = "invalid";
-        break;
-      } else {
-        answer3 = prompt("Are you of the opinion that the only time to rest should be when you sleep(yes/no)" + question3);
-      }
-    }
-    answers.push(answer3);
-    for (let i = 0; i < answers.length; i++) {
-      console.log(answers[i]);}
-      return answers;
+
+function QuestionsAndArray(answer) {
+
+  if (answer === undefined) {
+    answerArray.push("Answer not provided.");
+  } else if (answer.toLowerCase() === "yes" ) {
+    answerArray.push("Yes");
+  } else if (answer.toLowerCase() === "no") {
+    answerArray.push("No");
+  } else {
+    answerArray.push("Invalid");
+  }
+
     
   }
-  QuestionsAndArray()
+  
+  QuestionsAndArray(answer1);
+  QuestionsAndArray(answer2);
+  QuestionsAndArray(answer3);
+  
+  
+
+
+  function arrayAnswers (array) {
+    
+    for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);}
+  }
+
+    arrayAnswers (answerArray);
+
+    
+
+
